@@ -21,8 +21,3 @@ run:
 
 stop:
 	docker stop $(cont_name)
-
-# docker run -d --name=$(cont_name) -p 9200:9200 "$(tag_name):$(tag)"
-
-stop:
-	docker stop $(cont_name)

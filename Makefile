@@ -32,13 +32,13 @@ stop-api:
 	
 # FRONT END
 build-front:
-	$(MAKE) -C ApiUsuarios build
+	$(MAKE) -C ProyectoOpenInfo build
 
 run-front:
-	$(MAKE) -C ApiUsuarios run
+	$(MAKE) -C ProyectoOpenInfo run
 
 stop-front:
-	$(MAKE) -C ApiUsuarios stop
+	$(MAKE) -C ProyectoOpenInfo stop
 
 # DATABASE
 run-db:
