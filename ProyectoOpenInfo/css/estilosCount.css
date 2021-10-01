@@ -1,0 +1,28 @@
+.wrapper {
+  text-align: center;
+}
+.time {
+  color: #b4b4b4;
+  font-size: 85px;
+}
+.label {
+  font-size: 2em;
+  display: block;
+  color: #b4b4b4;
+}
+.bg {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+@media (max-width: 577px){
+  .time {
+    color: #b4b4b4;
+    font-size: 40px;
+  }
+  .labelcontador {
+    font-size: 12px;
+    display: block;
+    color: #b4b4b4;
+  }
+}
+

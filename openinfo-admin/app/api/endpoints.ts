@@ -1,0 +1,46 @@
+export default {
+  auth: {
+    login: '/oauth/token',
+    checkToken: '/oauth/check_token',
+    register: '/openInfo/usuarios',
+    updatePassword: '/openInfo/cambiarPassword',
+  },
+  admin: {
+    newCommission: '/openInfo/asignarComision',
+    getCommission: '/openInfo/comision',
+    delCommission: (code: string): string => `/openInfo/comision/${code}`,
+    resetPass: '/openInfo/resetPassword',
+    updateUser: '/openInfo/actualizarUsuario',
+    getPeriods: '/openInfo/listaGestiones',
+    postPeriod: '/openInfo/registrarGestion',
+    setPeriod: '/openInfo/activarGestion',
+    setPeriodState: '/openInfo/habilitarGestion',
+  },
+  commission: {
+    postSponsor: '/openInfo/auspiciadores',
+    getSponsors: '/openInfo/auspiciadores',
+    searchUser: (term: string): string => `/openInfo/buscarUsuario/${term}`,
+    postTeam: `/openInfo/registrarEquipo`,
+    getTeams: `/openInfo/equipos`,
+    searchProject: (term: string): string => `/openInfo/buscarProyecto/${term}`,
+    newJury: '/openInfo/registrarJurado',
+    juries: '/openInfo/jurados',
+    grade: '/openInfo/registrarNota',
+    allActivities: '/openInfo/listaActividades',
+    updateActivity: '/openInfo/actualizarProyecto',
+  },
+  common: {
+    projectTypes: '/openInfo/tipoProyectos',
+    teamTypes: '/openInfo/tipoEquipo',
+  },
+  teamLeader: {
+    getTeams: (code: string): string => `/openInfo/equiposUsuario/${code}`,
+    postProject: '/openInfo/registrarProyecto',
+    getProjects: (code: string): string => `/openInfo/proyectosDocente/${code}`,
+  },
+  projectLeader: {
+    getProjects: (code: string): string => `/openInfo/proyectosUsuario/${code}`,
+    postNewMember: `/openInfo/agregarParticipante`,
+    updateProject: (id: number): string => `/openInfo/actualizarProyecto/${id}`,
+  },
+};
