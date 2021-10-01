@@ -30,23 +30,30 @@ El sistema esta diseñado para correr en cualquier Sistema Operativo basado en L
 
 ##### Base de datos
 `make run-db` Inicia el servicio de base de datos.
+
 `make stop-db` Detiene el servicio de base de datos.
 
 ##### Backend (Java)
 `make build-api` Inicia el proceso de build del backend (necesario si se hiceron cambios en el código fuente). El servicio debe estar detenido antes de hacer el build.
+
 `make run-api` Inicia el servicio de backend, usualmente usado cuando se está haciendo el proceso de deploy por primera vez, cuando el servicio se detuvo por una razón desconocida o luego de hacer un `make build-api`.
+
 `make stop-api` Detiene el servicio de backend.
 
 *Los comandos similares en los siguientes servicios tienen las **mismas advertencias, o recomendaciones***
 
 ##### Front-end
 `make build-front` Inicia el proceso de build del front-end.
+
 `make run-front` Inicia el servicio de front.
+
 `make stop-front` Detiene el servicio de front.
 
 ##### Panel de administrador
 `make build-admin` Inicia el proceso de build del panel de admin.
+
 `make run-admin` Inicia el servicio del panel de admin.
+
 `make stop-admin` Detiene el servicio del panel de admin.
 
 ### Cambios en el sistema
@@ -57,7 +64,7 @@ Si se require hacer cambios al sistema, el proceso es muy similar para cualquier
 3. Una vez realizados los cambios, subirlos al repositorio usando git.
     - `git add .`
     - `git commit -m "una descripción de los cambios realizados"`
-    - `git push origin master`
+    - `git push origin main`
 4. Conectarse al servidor usando `ssh`
 5. Dentro del directorio `openinfo` en el servidor, actualizar el còdigo:
     - `git pull`
